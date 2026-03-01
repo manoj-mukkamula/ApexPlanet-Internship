@@ -37,7 +37,7 @@ This portfolio website demonstrates:
 
 View the live project here:
 
-[Portfolio Live Link](PASTE_YOUR_LIVE_LINK_HERE)
+[[Portfolio Live Link](PASTE_YOUR_LIVE_LINK_HERE)](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/)
 
 ---
 
