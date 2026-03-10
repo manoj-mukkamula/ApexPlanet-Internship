@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TaskFlow — Task Manager & Contact Form" />
+    <title>TaskFlow</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar" role="banner">
+      <a href="#home" class="navbar__brand" aria-label="TaskFlow home">
+        <svg
+          width="28"
+          height="28"
+          viewBox="0 0 28 28"
+          fill="none"
+          aria-hidden="true"
+        >
+          <rect width="28" height="28" rx="7" fill="#2563eb" />
+          <path
+            d="M8 14.5L12.5 19L20 10"
+            stroke="white"
+            stroke-width="2.2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <span class="navbar__logo-text"
+          >Task<span class="navbar__logo-accent">Flow</span></span
+        >
+      </a>
+
+      <button
+        class="navbar__toggle"
+        id="navToggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+      >
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="navMenu" aria-label="Main navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#tasks" class="nav-link">Tasks</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="hero" id="home">
+      <div class="hero__content">
+        <h1 class="hero__heading">
+          Manage your work.<br />
+          <em>Stay ahead.</em>
+        </h1>
+        <p class="hero__sub">
+          <b>TaskFlow</b> is a lightweight task manager to organize your work
+          with priority levels, category labels, and due dates, featuring a live
+          stats dashboard and a fully validated contact form.
+        </p>
+        <div class="hero__cta">
+          <a href="#tasks" class="btn btn-primary">Open Task Manager</a>
+          <a href="#contact" class="btn btn-ghost">Contact</a>
+        </div>
+      </div>
+
+      <div class="hero__features" aria-hidden="true">
+        <div class="feature-card">
+          <span class="feature-icon"
+            ><i class="fa-solid fa-list-check"></i
+          ></span>
+          <div>
+            <strong>Smart Tasks</strong>
+            <span>Priority, category &amp; due date</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon"
+            ><i class="fa-solid fa-chart-simple"></i
+          ></span>
+          <div>
+            <strong>Live Stats</strong>
+            <span>Real-time completion tracking</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon"
+            ><i class="fa-solid fa-envelope-open-text"></i
+          ></span>
+          <div>
+            <strong>Contact Form</strong>
+            <span>Validated with instant feedback</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- task manager -->
+    <main class="page-grid" id="tasks">
+      <aside aria-label="Task stats">
+        <div class="panel">
+          <p class="panel-label">Overview</p>
+          <ul class="stats-list">
+            <li><span>Total Tasks</span> <strong id="statTotal">0</strong></li>
+            <li>
+              <span>Completed</span>
+              <strong id="statDone" class="clr-green">0</strong>
+            </li>
+            <li>
+              <span>Pending</span>
+              <strong id="statPending" class="clr-amber">0</strong>
+            </li>
+          </ul>
+          <div
+            class="progress-track"
+            id="progressWrap"
+            role="progressbar"
+            aria-valuenow="0"
+            aria-valuemin="0"
+            aria-valuemax="100"
+          >
+            <div class="progress-fill" id="progressBar"></div>
+          </div>
+          <p class="progress-label" id="progressLabel">0% complete</p>
+        </div>
+
+        <div class="panel">
+          <p class="panel-label">Sort</p>
+          <select class="field" id="sortSelect">
+            <option value="newest">Newest First</option>
+            <option value="oldest">Oldest First</option>
+            <option value="priority">Priority</option>
+            <option value="az">A to Z</option>
+          </select>
+        </div>
+      </aside>
+
+      <section aria-label="Task manager">
+        <!-- add task -->
+        <div class="card" id="addTaskCard">
+          <h2>Add New Task</h2>
+          <form id="taskForm" novalidate>
+            <div class="row-2">
+              <div class="field-group">
+                <label for="taskTitle">Task Title *</label>
+                <input
+                  type="text"
+                  id="taskTitle"
+                  class="field"
+                  placeholder="e.g. Review pull request"
+                  maxlength="80"
+                  autocomplete="off"
+                />
+                <span class="err" id="taskTitleError"></span>
+              </div>
+              <div class="field-group">
+                <label for="taskDesc">Description</label>
+                <input
+                  type="text"
+                  id="taskDesc"
+                  class="field"
+                  placeholder="Optional short description"
+                  maxlength="120"
+                  autocomplete="off"
+                />
+              </div>
+            </div>
+
+            <div class="row-3">
+              <div class="field-group">
+                <label for="taskPriority">Priority *</label>
+                <select id="taskPriority" class="field">
+                  <option value="">Select</option>
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                </select>
+                <span class="err" id="taskPriorityError"></span>
+              </div>
+              <div class="field-group">
+                <label for="taskCategory">Category *</label>
+                <select id="taskCategory" class="field">
+                  <option value="">Select</option>
+                  <option value="work">Work</option>
+                  <option value="personal">Personal</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="err" id="taskCategoryError"></span>
+              </div>
+              <div class="field-group">
+                <label for="taskDue">Due Date</label>
+                <input type="date" id="taskDue" class="field" />
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">
+                <i class="fa-solid fa-plus"></i> Add Task
+              </button>
+              <button type="button" class="btn btn-ghost" id="clearFormBtn">
+                Clear
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- task list -->
+        <div class="card" id="taskListCard">
+          <div class="card-header">
+            <h2>Your Tasks</h2>
+            <div class="list-controls">
+              <input
+                type="search"
+                id="taskSearch"
+                class="field search-field"
+                placeholder="Search tasks..."
+              />
+              <button class="btn btn-danger" id="clearAllBtn">
+                <i class="fa-solid fa-trash"></i> Clear All
+              </button>
+            </div>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            <i class="fa-regular fa-clipboard"></i>
+            <p>No tasks yet. Add one above to get started.</p>
+          </div>
+
+          <ul id="taskList" aria-label="Task list" aria-live="polite"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- contact -->
+    <section class="contact-section" id="contact">
+      <div class="contact-grid">
+        <div class="panel contact-info">
+          <h2>Get in touch</h2>
+          <p>
+            Have a question or want to connect? Fill out the form and I'll get
+            back to you.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-envelope"></i
+              ><a href="mailto:manojmukkamula2@gmail.com"
+                >manojmukkamula2@gmail.com</a
+              >
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i
+              ><a href="tel:+919908433594">+91 9908433594</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i
+              ><span>Hyderabad, Telangana, India</span>
+            </li>
+            <li>
+              <i class="fa-brands fa-github"></i
+              ><a
+                href="https://github.com/manoj-mukkamula"
+                target="_blank"
+                rel="noopener"
+                >github.com/manoj-mukkamula</a
+              >
+            </li>
+            <li>
+              <i class="fa-brands fa-linkedin"></i
+              ><a
+                href="https://www.linkedin.com/in/manoj-mukkamula-baa58a2a7/"
+                target="_blank"
+                rel="noopener"
+                >linkedin.com/in/manoj-mukkamula</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="card contact-card">
+          <div class="success-banner" id="successBanner" style="display: none">
+            <i class="fa-solid fa-circle-check"></i>
+            <div>
+              <strong>Message sent!</strong>
+              <p>I'll get back to you soon.</p>
+            </div>
+          </div>
+
+          <form id="contactForm" novalidate>
+            <div class="row-2">
+              <div class="field-group">
+                <label for="contactName">Full Name *</label>
+                <input
+                  type="text"
+                  id="contactName"
+                  class="field"
+                  placeholder="Your name"
+                  maxlength="60"
+                  autocomplete="name"
+                />
+                <span class="err" id="contactNameError"></span>
+              </div>
+              <div class="field-group">
+                <label for="contactEmail">Email *</label>
+                <input
+                  type="email"
+                  id="contactEmail"
+                  class="field"
+                  placeholder="you@example.com"
+                  maxlength="100"
+                  autocomplete="email"
+                />
+                <span class="err" id="contactEmailError"></span>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="contactSubject">Subject *</label>
+              <input
+                type="text"
+                id="contactSubject"
+                class="field"
+                placeholder="What's this about?"
+                maxlength="100"
+              />
+              <span class="err" id="contactSubjectError"></span>
+            </div>
+
+            <div class="field-group">
+              <label for="contactMessage">Message *</label>
+              <textarea
+                id="contactMessage"
+                class="field textarea"
+                placeholder="Write your message here..."
+                rows="5"
+                maxlength="1000"
+              ></textarea>
+              <div class="textarea-footer">
+                <span class="err" id="contactMessageError"></span>
+                <span class="char-count" id="contactCharCount">0 / 1000</span>
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-full"
+              id="contactSubmitBtn"
+            >
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>
+        Built by <strong>Mukkamula Manoj</strong> &middot; ApexPlanet Internship
+        Task 2 &middot; <span id="footerYear"></span>
+      </p>
+    </footer>
+
+    <div class="toast" id="toast" aria-live="assertive"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
