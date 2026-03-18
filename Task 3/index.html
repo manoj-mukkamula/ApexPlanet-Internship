@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevToolkit</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="nav-logo">
+        <a href="#" class="nav-logo">
+          <span class="logo-icon">&lt;/&gt;</span>
+          <span class="logo-text">DevToolkit</span>
+        </a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li>
+          <a href="#github-section" class="nav-link active">GitHub Finder</a>
+        </li>
+        <li><a href="#quiz-section" class="nav-link">Quiz</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="hero-tag">// developer utilities</p>
+        <h1 class="hero-title">Dev<span class="accent">Toolkit</span></h1>
+        <p class="hero-sub">
+          Find GitHub profiles. Test your web dev knowledge. All in one place.
+        </p>
+        <div class="hero-btns">
+          <a href="#github-section" class="btn btn-primary">GitHub Finder</a>
+          <a href="#quiz-section" class="btn btn-outline">Take the Quiz</a>
+        </div>
+      </div>
+      <div class="hero-graphic">
+        <div class="code-block">
+          <span class="line"
+            ><span class="kw">const</span> dev =
+            <span class="fn">findUser</span>(<span class="str"
+              >'your-username'</span
+            >);</span
+          >
+          <span class="line"
+            ><span class="kw">const</span> score =
+            <span class="fn">takeQuiz</span>(<span class="str"
+              >'HTML/CSS/JS'</span
+            >);</span
+          >
+          <span class="line"
+            ><span class="cm">// level up your skills 🚀</span></span
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GITHUB FINDER SECTION ===== -->
+    <section class="section" id="github-section">
+      <div class="section-header">
+        <span class="section-tag">01 /</span>
+        <h2 class="section-title">GitHub Profile Finder</h2>
+        <p class="section-sub">
+          Search any GitHub user and explore their profile instantly.
+        </p>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="search-container">
+        <div class="search-box">
+          <i class="fa-brands fa-github search-icon"></i>
+          <input
+            type="text"
+            id="githubInput"
+            class="search-input"
+            placeholder="Enter GitHub username..."
+            autocomplete="off"
+          />
+          <button class="search-btn" id="searchBtn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <span>Search</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div class="spinner-container" id="spinner">
+        <div class="spinner"></div>
+        <p class="spinner-text">Fetching profile...</p>
+      </div>
+
+      <!-- Error Message -->
+      <div class="error-box" id="errorBox">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <p id="errorMsg">User not found. Please check the username.</p>
+      </div>
+
+      <!-- Profile Card -->
+      <div class="profile-card" id="profileCard">
+        <div class="profile-top">
+          <div class="avatar-wrapper">
+            <img src="" alt="Avatar" class="avatar" id="avatar" />
+            <span class="avatar-badge"
+              ><i class="fa-brands fa-github"></i
+            ></span>
+          </div>
+          <div class="profile-info">
+            <h3 class="profile-name" id="profileName">--</h3>
+            <p class="profile-login" id="profileLogin">@--</p>
+            <p class="profile-bio" id="profileBio">No bio available.</p>
+            <div class="profile-meta">
+              <span id="profileLocation"
+                ><i class="fa-solid fa-location-dot"></i> --</span
+              >
+              <span id="profileBlog"><i class="fa-solid fa-link"></i> --</span>
+              <span id="profileJoined"
+                ><i class="fa-solid fa-calendar"></i> --</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="profile-stats">
+          <div class="stat-box">
+            <span class="stat-num" id="statRepos">0</span>
+            <span class="stat-label">Repositories</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="statFollowers">0</span>
+            <span class="stat-label">Followers</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="statFollowing">0</span>
+            <span class="stat-label">Following</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="statGists">0</span>
+            <span class="stat-label">Gists</span>
+          </div>
+        </div>
+
+        <!-- GitHub Link -->
+        <a
+          href="#"
+          id="profileLink"
+          target="_blank"
+          class="btn btn-primary profile-gh-btn"
+        >
+          <i class="fa-brands fa-github"></i> View on GitHub
+        </a>
+      </div>
+
+      <!-- Top Repositories -->
+      <div class="repos-section" id="reposSection">
+        <h3 class="repos-title">
+          <i class="fa-solid fa-code-branch"></i> Top Repositories
+        </h3>
+        <div class="repos-grid" id="reposGrid">
+          <!-- Repo cards injected by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DIVIDER ===== -->
+    <div class="section-divider">
+      <span>&#9670; &#9670; &#9670;</span>
+    </div>
+
+    <!-- ===== QUIZ SECTION ===== -->
+    <section class="section" id="quiz-section">
+      <div class="section-header">
+        <span class="section-tag">02 /</span>
+        <h2 class="section-title">Web Dev Quiz</h2>
+        <p class="section-sub">
+          10 questions. HTML, CSS & JavaScript. How well do you know the web?
+        </p>
+      </div>
+
+      <!-- Quiz Start Screen -->
+      <div class="quiz-start" id="quizStart">
+        <div class="quiz-start-card">
+          <div class="quiz-icon">🧠</div>
+          <h3>Ready to Test Your Skills?</h3>
+          <ul class="quiz-rules">
+            <li><i class="fa-solid fa-check"></i> 10 questions total</li>
+            <li><i class="fa-solid fa-check"></i> 20 seconds per question</li>
+            <li>
+              <i class="fa-solid fa-check"></i> Topics: HTML, CSS, JavaScript
+            </li>
+            <li><i class="fa-solid fa-check"></i> Score shown at the end</li>
+          </ul>
+          <button class="btn btn-primary" id="startQuizBtn">
+            <i class="fa-solid fa-play"></i> Start Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Game Screen -->
+      <div class="quiz-game" id="quizGame">
+        <div class="quiz-topbar">
+          <span class="quiz-progress" id="quizProgress">Question 1 of 10</span>
+          <div class="quiz-timer-box">
+            <i class="fa-regular fa-clock"></i>
+            <span id="timerDisplay">20</span>s
+          </div>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="quiz-progressbar">
+          <div class="quiz-progressbar-fill" id="progressBarFill"></div>
+        </div>
+
+        <div class="quiz-card">
+          <p class="quiz-category" id="quizCategory">HTML</p>
+          <h3 class="quiz-question" id="quizQuestion">Question goes here</h3>
+          <div class="quiz-options" id="quizOptions">
+            <!-- Options injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Quiz Result Screen -->
+      <div class="quiz-result" id="quizResult">
+        <div class="result-card">
+          <div class="result-emoji" id="resultEmoji">🎉</div>
+          <h3 class="result-title" id="resultTitle">Great Job!</h3>
+          <p class="result-score">
+            You scored <span id="finalScore">0</span> out of <span>10</span>
+          </p>
+          <div class="result-bar-wrap">
+            <div class="result-bar" id="resultBar"></div>
+          </div>
+          <p class="result-msg" id="resultMsg">Keep practicing!</p>
+          <div class="result-btns">
+            <button class="btn btn-primary" id="restartQuizBtn">
+              <i class="fa-solid fa-rotate-right"></i> Restart Quiz
+            </button>
+            <a href="#github-section" class="btn btn-outline"
+              >Try GitHub Finder</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <a href="#"><span class="footer-logo">&lt;/&gt; DevToolkit</span></a>
+        <p class="footer-text">
+          Built with HTML, CSS & JavaScript &nbsp;|&nbsp; ApexPlanet Internship
+          Task-3
+        </p>
+        <a href="https://www.linkedin.com/in/manoj-mukkamula-baa58a2a7/"
+          ><p class="footer-credit">
+            Made by <span class="accent">Manoj Mukkamula</span>
+          </p></a
+        >
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
