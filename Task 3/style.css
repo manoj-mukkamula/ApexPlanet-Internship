@@ -1106,6 +1106,7 @@ img {
 
   .hamburger {
     display: flex;
+    z-index: 1001;
   }
 
   .nav-links {
@@ -1118,9 +1119,11 @@ img {
     flex-direction: column;
     padding: 16px 5%;
     gap: 4px;
-    transform: translateY(-120%);
+    transform: translateY(-150%);
     transition: transform 0.3s ease;
-    z-index: 999;
+    z-index: 1000;
+    display: flex;
+    overflow: hidden;
   }
 
   .nav-links.open {
@@ -1131,6 +1134,9 @@ img {
     width: 100%;
     text-align: center;
     padding: 12px;
+    color: var(--text-primary);
+    display: block;
+    font-size: 1rem;
   }
 
   .hero-title {
