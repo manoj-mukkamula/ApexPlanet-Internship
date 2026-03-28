@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TechStore — Product Listing</title>
+  <link rel="stylesheet" href="products.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+      <div class="logo">Tech<span>Store</span></div>
+      <div class="cart-info">
+        <i class="fas fa-cubes"></i>
+        <span id="product-count">0</span> products
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">🛒 Explore Our Collection</p>
+      <h1>Find Your Next<br/><span>Tech Essential</span></h1>
+      <p class="hero-sub">Filter, sort, and discover the best tech products curated for you.</p>
+    </div>
+  </section>
+
+  <!-- CONTROLS PANEL -->
+  <section class="controls-panel">
+    <!-- Search -->
+    <div class="search-wrap">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="search-input" placeholder="Search by name, category or feature..." autocomplete="off"/>
+      <button id="clear-search" class="clear-btn" title="Clear search">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Filters Row -->
+    <div class="filters-row">
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-tag"></i> Category</label>
+        <select id="category-filter" class="filter-select">
+          <option value="all">All Categories</option>
+          <option value="laptop">💻 Laptops</option>
+          <option value="phone">📱 Phones</option>
+          <option value="audio">🎧 Audio</option>
+          <option value="tablet">📋 Tablets</option>
+          <option value="accessory">🖱️ Accessories</option>
+          <option value="monitor">🖥️ Monitors</option>
+        </select>
+      </div>
+
+      <div class="filter-group range-group">
+        <label class="filter-label">
+          <i class="fas fa-indian-rupee-sign"></i> Max Price:
+          <strong id="price-label">₹2,00,000</strong>
+        </label>
+        <div class="range-track">
+          <input type="range" id="price-filter" min="5000" max="200000" value="200000" step="1000"/>
+          <div class="range-fill" id="range-fill"></div>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <label class="filter-label"><i class="fas fa-arrow-up-wide-short"></i> Sort By</label>
+        <select id="sort-filter" class="filter-select">
+          <option value="default">Default Order</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating-desc">⭐ Best Rated</option>
+          <option value="name-asc">Name: A → Z</option>
+        </select>
+      </div>
+
+      <button id="reset-btn" class="reset-btn">
+        <i class="fas fa-rotate-left"></i> Reset
+      </button>
+    </div>
+
+    <!-- Active Filters -->
+    <div class="filter-status">
+      <span id="result-count" class="result-count"></span>
+      <div id="active-filters" class="active-filters"></div>
+    </div>
+  </section>
+
+  <!-- LOADING STATE -->
+  <div class="loading-state" id="loading">
+    <div class="spinner"></div>
+    <p>Loading products<span class="dots">...</span></p>
+  </div>
+
+  <!-- PRODUCT GRID -->
+  <main class="product-grid" id="product-grid"></main>
+
+  <!-- NO RESULTS -->
+  <div class="no-results hidden" id="no-results">
+    <div class="no-results-icon">📭</div>
+    <h3>No products found</h3>
+    <p>Try changing your search term or adjusting filters.</p>
+    <button class="no-results-btn" onclick="resetAll()">
+      <i class="fas fa-rotate-left"></i> Clear All Filters
+    </button>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built by <strong>Mukkamula Manoj</strong> &nbsp;·&nbsp; ApexPlanet Internship — Task 4 &nbsp;·&nbsp;
+      <a href="index.html">← Back to Portfolio</a>
+    </p>
+  </footer>
+
+  <script src="products.js"></script>
+</body>
+</html>

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Mukkamula Manoj — Aspiring Web Developer & MERN Stack Learner. Portfolio showcasing projects, skills and internship work."/>
+  <title>Mukkamula Manoj — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">MM<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home"     class="nav-link">Home</a></li>
+        <li><a href="#about"    class="nav-link">About</a></li>
+        <li><a href="#skills"   class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact"  class="nav-link">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-inner">
+      <!-- Left: Text -->
+      <div class="hero-content">
+        <p class="hero-greeting">👋 Hello, I'm</p>
+        <h1 class="hero-name">Mukkamula<br/><span>Manoj</span></h1>
+        <p class="hero-tagline">Aspiring Web Developer &amp; MERN Stack Learner<br/>Focused on Building Real, Impactful Projects</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects <i class="fas fa-arrow-down"></i></a>
+          <a href="#contact"  class="btn btn-outline">Contact Me</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/manoj-mukkamula" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/manoj-mukkamula/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="mailto:mukkamulamanoj@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+
+      <!-- Right: Profile Image -->
+      <div class="hero-visual">
+        <div class="hero-img-wrap">
+          <img src="images/img2.png" alt="Mukkamula Manoj" class="hero-photo"/>
+          <div class="hero-img-ring"></div>
+          <div class="hero-img-dot dot-1"></div>
+          <div class="hero-img-dot dot-2"></div>
+        </div>
+        <!-- Floating tech badges -->
+        <div class="hero-badge badge-1"><i class="fab fa-js-square"></i> JavaScript</div>
+        <div class="hero-badge badge-2"><i class="fab fa-react"></i> MERN Stack</div>
+        <div class="hero-badge badge-3"><i class="fas fa-code"></i> Web Dev</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>Scroll down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="about-grid">
+
+        <!-- Avatar + Stats -->
+        <div class="about-avatar">
+          <div class="avatar-box">
+            <img src="images/img1.png" alt="Mukkamula Manoj" class="avatar-photo"/>
+          </div>
+          <div class="avatar-stats">
+            <div class="stat"><strong>2</strong><span>Internships</span></div>
+            <div class="stat"><strong>5+</strong><span>Projects</span></div>
+            <div class="stat"><strong>7.89</strong><span>CGPA</span></div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-text">
+          <p>I'm a final-year <strong>B.Tech Computer Science</strong> student at AAR Mahaveer Engineering College (JNTUH, 2026), passionate about building web applications that solve real problems.</p>
+          <p>I completed a <strong>MERN Stack internship at UptoSkills</strong>, gaining hands-on experience with Node.js, Express, and MongoDB. I'm currently completing a <strong>Web Development internship at ApexPlanet</strong>, where I've built a full project suite — a portfolio, a product listing app, and a task manager — using HTML, CSS, and JavaScript.</p>
+          <p>My goal: land a <strong>software developer role</strong> and grow toward a full-stack engineering career, writing clean, maintainable code on every project.</p>
+          <div class="about-links">
+            <a href="https://github.com/manoj-mukkamula" target="_blank" class="about-link">
+              <i class="fab fa-github"></i> GitHub Profile
+            </a>
+            <a href="https://www.linkedin.com/in/manoj-mukkamula/" target="_blank" class="about-link">
+              <i class="fab fa-linkedin-in"></i> LinkedIn
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-label">02 / Skills</div>
+      <h2 class="section-title">Technical <span>Skills</span></h2>
+      <div class="skills-grid">
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">HTML5</span>
+            <span class="skill-tag primary">CSS3</span>
+            <span class="skill-tag primary">JavaScript</span>
+            <span class="skill-tag primary">SCSS</span>
+            <span class="skill-tag">Responsive Design</span>
+            <span class="skill-tag">Flexbox</span>
+            <span class="skill-tag">CSS Grid</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-server"></i> Backend &amp; DB</h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">Java</span>
+            <span class="skill-tag primary">SQL</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <h3 class="skill-cat-title"><i class="fas fa-tools"></i> Tools</h3>
+          <div class="skill-tags">
+            <span class="skill-tag primary">Git</span>
+            <span class="skill-tag primary">GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">GitHub Pages</span>
+            <span class="skill-tag">Render</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-label">03 / Projects</div>
+      <h2 class="section-title">My <span>Projects</span></h2>
+
+      <!-- Filter Tabs -->
+      <div class="project-tabs">
+        <button class="tab-btn active" data-filter="all">All</button>
+        <button class="tab-btn" data-filter="internship">Internship</button>
+        <button class="tab-btn" data-filter="personal">Personal</button>
+      </div>
+
+      <!-- ── FEATURED: Task 4 full-width banner ── -->
+      <div class="featured-banner" data-category="internship" id="featured-task4">
+        <div class="featured-banner-left">
+          <div class="featured-meta">
+            <span class="featured-pill">⭐ Featured · ApexPlanet Internship — Task 4</span>
+          </div>
+          <h3 class="featured-title">Full Project Implementation</h3>
+          <p class="featured-desc">The capstone task of my ApexPlanet internship — three real-world applications built from scratch: this Portfolio, a TechStore Product Listing App (search, filter, sort), and a NoteVault Task Manager (localStorage, filtering, CRUD). Demonstrates end-to-end frontend development skills.</p>
+          <div class="featured-tech">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>localStorage</span><span>REST API</span>
+          </div>
+          <div class="featured-actions">
+            <a href="product-app.html" class="btn btn-primary"><i class="fas fa-store"></i> TechStore Product App</a>
+            <a href="todo-app.html"    class="btn btn-outline"><i class="fas fa-list-check"></i> NoteVault To-Do App</a>
+            <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%204" target="_blank" class="btn btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+        <div class="featured-banner-right">
+          <div class="featured-preview">
+            <div class="preview-card preview-card-1">
+              <div class="preview-header"><span class="pv-dot r"></span><span class="pv-dot y"></span><span class="pv-dot g"></span></div>
+              <div class="preview-body">
+                <div class="pv-icon">🛒</div>
+                <div class="pv-title">TechStore</div>
+                <div class="pv-line"></div><div class="pv-line short"></div>
+                <div class="pv-grid">
+                  <div class="pv-card"></div><div class="pv-card"></div><div class="pv-card"></div>
+                </div>
+              </div>
+            </div>
+            <div class="preview-card preview-card-2">
+              <div class="preview-header"><span class="pv-dot r"></span><span class="pv-dot y"></span><span class="pv-dot g"></span></div>
+              <div class="preview-body">
+                <div class="pv-icon">✅</div>
+                <div class="pv-title">NoteVault</div>
+                <div class="pv-line"></div>
+                <div class="pv-task"></div><div class="pv-task"></div><div class="pv-task done"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── REGULAR PROJECT GRID ── -->
+      <div class="projects-grid" id="projects-grid">
+
+        <!-- AI Resume Analyzer -->
+        <div class="project-card" data-category="personal">
+          <div class="project-top">
+            <div class="project-icon">🤖</div>
+            <div class="project-links">
+              <a href="https://github.com/manoj-mukkamula/AI-Resume-Analyzer" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://ai-resume-analyzer-sahw.onrender.com/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <span class="project-badge personal-badge">🌟 Personal Project</span>
+          <h3 class="project-name">AI Resume Analyzer</h3>
+          <p class="project-desc">Full-stack AI-powered tool that analyzes resumes against job descriptions, provides match scores, and gives actionable improvement feedback using the Gemini API.</p>
+          <div class="project-tech">
+            <span>Node.js</span><span>Express</span><span>Gemini API</span><span>HTML</span><span>CSS</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://ai-resume-analyzer-sahw.onrender.com/" target="_blank" class="project-btn primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/manoj-mukkamula/AI-Resume-Analyzer" target="_blank" class="project-btn">GitHub <i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Task 3 - DevToolkit -->
+        <div class="project-card" data-category="internship">
+          <div class="project-top">
+            <div class="project-icon">🧰</div>
+            <div class="project-links">
+              <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <span class="project-badge">Internship · Task 3</span>
+          <h3 class="project-name">DevToolkit</h3>
+          <p class="project-desc">Single-page developer utility app with a GitHub Profile Finder (GitHub REST API) and an interactive Web Dev Quiz. Dark theme, responsive, mobile-friendly.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>GitHub API</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/" target="_blank" class="project-btn primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203" target="_blank" class="project-btn">GitHub <i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Task 2 - TaskFlow -->
+        <div class="project-card" data-category="internship">
+          <div class="project-top">
+            <div class="project-icon">📋</div>
+            <div class="project-links">
+              <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%202" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%202/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <span class="project-badge">Internship · Task 2</span>
+          <h3 class="project-name">TaskFlow — Intermediate Web Dev</h3>
+          <p class="project-desc">Contact form with JS validation, a responsive Flexbox + CSS Grid layout, and a dynamic to-do list built with DOM manipulation. Clean, functional UI.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flexbox</span><span>Grid</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%202/" target="_blank" class="project-btn primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%202" target="_blank" class="project-btn">GitHub <i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Task 1 - Web Dev Basics -->
+        <div class="project-card" data-category="internship">
+          <div class="project-top">
+            <div class="project-icon">🌐</div>
+            <div class="project-links">
+              <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+              <a href="https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/" target="_blank" title="Live Demo"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <span class="project-badge">Internship · Task 1</span>
+          <h3 class="project-name">Web Dev Basics</h3>
+          <p class="project-desc">Foundational webpage with semantic HTML5, styled with CSS (colors, fonts, spacing), and JavaScript interactivity. The starting point of the ApexPlanet internship journey.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/" target="_blank" class="project-btn primary">Live Demo <i class="fas fa-external-link-alt"></i></a>
+            <a href="https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201" target="_blank" class="project-btn">GitHub <i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+        <!-- Frontend Practice -->
+        <div class="project-card" data-category="personal">
+          <div class="project-top">
+            <div class="project-icon">🎨</div>
+            <div class="project-links">
+              <a href="https://github.com/manoj-mukkamula/Cohort-2_0" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <span class="project-badge">Personal</span>
+          <h3 class="project-name">Frontend Practice Projects</h3>
+          <p class="project-desc">A collection of small HTML, CSS, and JavaScript projects built to strengthen core web development fundamentals and UI design skills.</p>
+          <div class="project-tech">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/manoj-mukkamula/Cohort-2_0" target="_blank" class="project-btn primary">View Repo <i class="fab fa-github"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-label">04 / Contact</div>
+      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <p class="contact-intro">I'm open to fresher developer opportunities, internships, and collaborations. Feel free to reach out!</p>
+      <div class="contact-grid">
+        <a href="mailto:mukkamulamanoj@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <span>mukkamulamanoj@gmail.com</span>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/manoj-mukkamula/" target="_blank" class="contact-card">
+          <i class="fab fa-linkedin-in"></i>
+          <div>
+            <strong>LinkedIn</strong>
+            <span>manoj-mukkamula</span>
+          </div>
+        </a>
+        <a href="https://github.com/manoj-mukkamula" target="_blank" class="contact-card">
+          <i class="fab fa-github"></i>
+          <div>
+            <strong>GitHub</strong>
+            <span>manoj-mukkamula</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <p>Designed &amp; Built by <strong>Mukkamula Manoj</strong></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

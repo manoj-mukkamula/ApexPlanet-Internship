@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NoteVault — Task Manager</title>
+  <link rel="stylesheet" href="todo.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> Back to Portfolio
+      </a>
+      <div class="logo">Note<span>Vault</span></div>
+      <div class="stats">
+        <span class="stat-item">
+          <i class="fas fa-check-circle"></i>
+          <span id="completed-count">0</span>/<span id="total-count">0</span>
+        </span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">✓ Organize Your Life</p>
+      <h1>NoteVault<br/><span>Task Manager</span></h1>
+      <p class="hero-sub">Add tasks, track progress, and stay organized with persistent storage.</p>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <div class="todo-wrapper">
+
+      <!-- INPUT SECTION -->
+      <section class="input-section">
+        <div class="input-group">
+          <input type="text" id="task-input" placeholder="Add a new task..." autocomplete="off" />
+          <button id="add-btn" class="add-btn" title="Add task">
+            <i class="fas fa-plus"></i> Add
+          </button>
+        </div>
+      </section>
+
+      <!-- CONTROLS ROW -->
+      <section class="controls-row">
+        <div class="control-group">
+          <label class="control-label">
+            <i class="fas fa-filter"></i> View
+          </label>
+          <select id="filter-select" class="control-select">
+            <option value="all">All Tasks</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+          </select>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label">
+            <i class="fas fa-sort"></i> Sort
+          </label>
+          <select id="sort-select" class="control-select">
+            <option value="date-desc">Newest First</option>
+            <option value="date-asc">Oldest First</option>
+            <option value="a-z">A → Z</option>
+          </select>
+        </div>
+
+        <button id="clear-completed-btn" class="btn-secondary danger" title="Clear completed tasks">
+          <i class="fas fa-trash"></i> Clear Done
+        </button>
+      </section>
+
+      <!-- STATISTICS -->
+      <section class="stats-section">
+        <div class="stat-card">
+          <div class="stat-icon total">
+            <i class="fas fa-tasks"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-label">Total Tasks</div>
+            <div class="stat-value" id="stat-total">0</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon active">
+            <i class="fas fa-hourglass-half"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-label">Pending</div>
+            <div class="stat-value" id="stat-pending">0</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon done">
+            <i class="fas fa-check"></i>
+          </div>
+          <div class="stat-info">
+            <div class="stat-label">Completed</div>
+            <div class="stat-value" id="stat-completed">0</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TASK LIST -->
+      <section class="tasks-section">
+        <div class="tasks-header">
+          <h2>My Tasks</h2>
+          <span class="task-count-badge" id="task-count-badge">0 tasks</span>
+        </div>
+
+        <!-- TASK LIST -->
+        <ul class="tasks-list" id="tasks-list"></ul>
+
+        <!-- EMPTY STATE -->
+        <div class="empty-state hidden" id="empty-state">
+          <div class="empty-icon">📝</div>
+          <h3>No tasks yet</h3>
+          <p>Add a task above to get started and track your progress!</p>
+        </div>
+      </section>
+
+      <!-- EDIT MODAL -->
+      <div class="modal hidden" id="edit-modal">
+        <div class="modal-overlay" id="modal-overlay"></div>
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>Edit Task</h3>
+            <button class="modal-close" id="modal-close-btn">
+              <i class="fas fa-times"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <input type="text" id="edit-input" class="modal-input" placeholder="Edit your task..." />
+          </div>
+          <div class="modal-footer">
+            <button class="btn-secondary" id="modal-cancel-btn">Cancel</button>
+            <button class="btn-primary" id="modal-save-btn">Save Changes</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Built by <strong>Mukkamula Manoj</strong> &nbsp;·&nbsp; ApexPlanet Internship — Task 4</p>
+  </footer>
+
+  <script src="todo.js"></script>
+</body>
+</html>
