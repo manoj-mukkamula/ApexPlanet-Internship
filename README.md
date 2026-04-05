@@ -12,7 +12,7 @@ This repo has all my task submissions from the ApexPlanet Software Pvt. Ltd. Web
 |--------|------|-----------|------|
 | 1. | Basics of Web Development | [ Personal Portfolio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/) | [Task 1](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201) |
 | 2. | Intermediate HTML, CSS & JS | [TaskFlow](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%202/) | [Task 2](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%202) |
-| 3. | Advanced Styling & JavaScript | [DevToolkit](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/) | [Task 3 -](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203) |
+| 3. | Advanced Styling & JavaScript | [DevToolkit](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/) | [Task 3 ](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203) |
 | 4. | Full Project Implementation | [Web Trio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%204/) | [Task 4](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%204) |
 | 5. | Final Project and Optimization | [ShopEase](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%205/) | [Task 5](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%205) |
 
