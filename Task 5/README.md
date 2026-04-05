@@ -1,4 +1,4 @@
-# 🛒 ShopEase - E-Commerce Web Application
+# 🛒 ShopEase: E-Commerce Web Application
 
 > **ApexPlanet Web Development Internship - Task 5: Final Project and Optimization**
 
