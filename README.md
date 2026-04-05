@@ -109,21 +109,7 @@ Built **ShopEase**, a fully functional e-commerce frontend as my capstone projec
 - Debounced search and slider inputs to avoid unnecessary DOM updates
 - `onerror` fallback on all images so no broken image errors appear in console
 - Tested on Chrome, Firefox, and Safari on both desktop and mobile
-
-**File Structure**
-```
-Task 5/
-├── index.html        (product listing + modal)
-├── cart.html         (shopping cart)
-├── about.html        (about and contact)
-├── css/
-│    └── style.css
-└── js/
-     ├── products.js  (product data)
-     ├── app.js       (index page logic)
-     └── cart.js      (cart page logic)
-```
-
+  
 ---
 
 ## Repository Structure
