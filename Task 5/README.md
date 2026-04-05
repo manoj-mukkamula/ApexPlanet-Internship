@@ -1,8 +1,8 @@
-# 🛒 ShopEase — E-Commerce Web Application
+# 🛒 ShopEase - E-Commerce Web Application
 
-> **ApexPlanet Web Development Internship — Task 5: Final Project and Optimization**
+> **ApexPlanet Web Development Internship - Task 5: Final Project and Optimization**
 
-ShopEase is a fully functional e-commerce frontend built using only **HTML, CSS, and Vanilla JavaScript** — no frameworks, no backend. It was developed as the capstone submission for a 45-day web development internship at ApexPlanet Software Pvt. Ltd.
+ShopEase is a fully functional e-commerce frontend built using only **HTML, CSS, and Vanilla JavaScript** - no frameworks, no backend. It was developed as the capstone submission for a 45-day web development internship at ApexPlanet Software Pvt. Ltd.
 
 ---
 
@@ -25,12 +25,12 @@ ShopEase is a fully functional e-commerce frontend built using only **HTML, CSS,
 ## 🚀 Features
 
 ### 🏠 Product Listing Page (`index.html`)
-- 24 products across 5 categories — Electronics, Clothing, Footwear, Accessories, Home & Living
+- 24 products across 5 categories - Electronics, Clothing, Footwear, Accessories, Home & Living
 - **Live search** with 300ms debounce for performance
 - **Category filter** dropdown
 - **Price range slider** with live label update
-- **Sort options** — Price Low→High, Price High→Low, Top Rated, Name A→Z
-- **Product Details Modal** — click any product card to view full details (image, description, price, rating, discount %)
+- **Sort options** - Price Low→High, Price High→Low, Top Rated, Name A→Z
+- **Product Details Modal** - click any product card to view full details (image, description, price, rating, discount %)
 - **Add to Cart** with "In Cart" state that persists across page reload
 - Toast notifications for user feedback
 - Animated product cards with fade-up on load
@@ -39,10 +39,10 @@ ShopEase is a fully functional e-commerce frontend built using only **HTML, CSS,
 
 ### 🛒 Cart Page (`cart.html`)
 - View all cart items with product image, name, category, price
-- **Quantity control** (+/−) — min qty removes item automatically
+- **Quantity control** (+/−) - min qty removes item automatically
 - **Remove item** button per product
-- **Order Summary** — Subtotal, Delivery (free above ₹999), 10% discount, Final Total
-- **Proceed to Checkout** — demo confirmation + cart clear
+- **Order Summary** - Subtotal, Delivery (free above ₹999), 10% discount, Final Total
+- **Proceed to Checkout** - demo confirmation + cart clear
 - Empty cart state with "Continue Shopping" link
 - Cart badge in navbar updated in real-time
 - **Footer always at bottom** (even with empty cart)
@@ -68,19 +68,6 @@ ShopEase is a fully functional e-commerce frontend built using only **HTML, CSS,
 
 ## 📁 File Structure
 
-```
-Task 5/
-├── index.html          ← Product listing page (main entry)
-├── cart.html           ← Shopping cart page
-├── about.html          ← About & contact page
-├── css/
-│    └── style.css      ← All styles (dark theme, responsive)
-├── js/
-│    ├── products.js    ← Product data (24 items with descriptions)
-│    ├── app.js         ← Index page logic (filters, modal, cart add)
-│    └── cart.js        ← Cart page logic (CRUD, summary, checkout)
-└── assets/             ← (Reserved for local images)
-```
 
 ---
 
@@ -101,10 +88,10 @@ Task 5/
 ## 🔧 Performance Optimizations Applied
 
 - `loading="lazy"` on all product and cart images
-- Debounced search input (300ms) — avoids filtering on every keystroke
-- `onerror` fallback on all images — no console errors from broken URLs
+- Debounced search input (300ms) - avoids filtering on every keystroke
+- `onerror` fallback on all images - no console errors from broken URLs
 - CSS animations only on visible elements
-- Single `localStorage` read/write per action — no redundant calls
+- Single `localStorage` read/write per action - no redundant calls
 - Responsive breakpoints at 480px, 768px, 1024px
 
 ---
