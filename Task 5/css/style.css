@@ -360,6 +360,21 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 
+/* Groups category + sort side by side on desktop too */
+.filter-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 16px;
+}
+.filter-row .filter-wrap {
+  min-width: 140px;
+}
+
+/* Price filter full width on its own */
+.filter-wrap--price {
+  min-width: 160px;
+}
+
 /* ===========================
    PRODUCT GRID
    =========================== */
@@ -991,23 +1006,34 @@ ul { list-style: none; }
     font-size: 0.85rem;
   }
 
-  /* CONTROLS — 2 col grid on mobile */
+  /* CONTROLS — clean grid layout on mobile */
   .controls-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
     padding: 12px 16px;
-    align-items: end;
+    align-items: stretch;
   }
+  /* Search stays full width — already block */
+  .search-wrap { min-width: unset; }
 
-  /* Search spans full width */
-  .search-wrap {
-    grid-column: 1 / -1;
+  /* Category + Sort: side by side */
+  .filter-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .filter-row .filter-wrap {
     min-width: unset;
   }
 
-  /* Category and Sort side by side */
+  /* Price slider: full width */
+  .filter-wrap--price {
+    min-width: unset;
+    width: 100%;
+  }
+
+  /* All filter-wraps: column layout */
   .filter-wrap {
     min-width: unset;
     flex-direction: column;
@@ -1015,22 +1041,13 @@ ul { list-style: none; }
   }
   .filter-wrap label {
     font-size: 0.68rem;
-    min-width: unset;
     white-space: nowrap;
   }
-  .filter-wrap select,
-  .filter-wrap input[type="range"] {
-    width: 100%;
-  }
+  .filter-wrap select { width: 100%; }
+  .filter-wrap input[type="range"] { width: 100%; }
 
-  /* Price filter spans full width */
-  .filter-wrap:has(input[type="range"]) {
-    grid-column: 1 / -1;
-  }
-
-  /* Result count + clear spans full width */
+  /* Meta row */
   .controls-meta {
-    grid-column: 1 / -1;
     margin-left: 0;
     justify-content: space-between;
   }
@@ -1093,7 +1110,9 @@ ul { list-style: none; }
 
   /* CONTROLS */
   .controls-inner { padding: 10px 12px; gap: 8px; }
+  .filter-row { gap: 8px; }
   .filter-wrap label { font-size: 0.65rem; }
+  .filter-wrap select { padding: 8px 10px; font-size: 0.8rem; }
 
   /* PRODUCT GRID — 2 col stays but tighter */
   .products-section { padding: 16px 12px 48px; }
