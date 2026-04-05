@@ -68,6 +68,17 @@ ShopEase is a fully functional e-commerce frontend built using only **HTML, CSS,
 
 ## 📁 File Structure
 
+Task 5/
+├── index.html ← Product listing page (main entry)
+├── cart.html ← Shopping cart page
+├── about.html ← About & contact page
+├── css/
+│ └── style.css ← All styles (dark theme, responsive)
+├── js/
+│ ├── products.js ← Product data (24 items with descriptions)
+│ ├── app.js ← Index page logic (filters, modal, cart add)
+│ └── cart.js ← Cart page logic (CRUD, summary, checkout)
+└── assets/ ← (Reserved for local images)
 
 ---
 
