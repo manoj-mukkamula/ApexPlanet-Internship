@@ -10,7 +10,7 @@ This repo has all my task submissions from the ApexPlanet Software Pvt. Ltd. Web
 
 | S.No | Task | Live Demo | Code |
 |--------|------|-----------|------|
-| 1. | Basics of Web Development | [ Personal Portfolio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/) | [Task 1](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201) |
+| 1. | Basics of Web Development | [Portfolio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/) | [Task 1](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201) |
 | 2. | Intermediate HTML, CSS & JS | [TaskFlow](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%202/) | [Task 2](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%202) |
 | 3. | Advanced Styling & JavaScript | [DevToolkit](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/) | [Task 3 ](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203) |
 | 4. | Full Project Implementation | [Web Trio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%204/) | [Task 4](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%204) |
@@ -30,7 +30,7 @@ This repo has all my task submissions from the ApexPlanet Software Pvt. Ltd. Web
 ## Task Breakdown
 
 ### Task 1 - Basics of Web Development
-**Days 1-9 | [Personal Portfolio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/) | [Source Code](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201)**
+**Days 1-9 | [Personal Portfolio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%201/) | [Linkedin post]([https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%201](https://www.linkedin.com/posts/manoj-mukkamula_webdevelopment-frontenddevelopment-html-ugcPost-7433927107803688960-pemn))**
 
 Started with the basics. Built a simple webpage using semantic HTML, added CSS for styling, and wrote a small JavaScript function to handle a button click.
 
@@ -41,7 +41,7 @@ Started with the basics. Built a simple webpage using semantic HTML, added CSS f
 ---
 
 ### Task 2 - Intermediate HTML, CSS and JavaScript
-**Days 10-18 | [TaskFlow](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%202/) | [Source Code](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%202)**
+**Days 10-18 | [TaskFlow](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%202/) | [Linkedin post]([https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%202](https://www.linkedin.com/posts/manoj-mukkamula_webdevelopment-frontenddevelopment-html-ugcPost-7437202121315262464-iTWS))**
 
 Built a project called **TaskFlow** with three separate features in one place.
 
@@ -52,7 +52,7 @@ Built a project called **TaskFlow** with three separate features in one place.
 ---
 
 ### Task 3 - Advanced Styling and JavaScript
-**Days 19-27 | [DevToolkit](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/) | [Source Code](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203)**
+**Days 19-27 | [DevToolkit](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%203/) | [Linkedin post]([https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%203](https://www.linkedin.com/feed/update/urn:li:activity:7440331234481958912/?originTrackingId=gFfpRYc2YIRgUcBx7hBaeA%3D%3D))**
 
 Built **DevToolkit**, a single-page app with two real features that use external APIs and advanced JS.
 
@@ -63,7 +63,7 @@ Built **DevToolkit**, a single-page app with two real features that use external
 ---
 
 ### Task 4 - Full Project Implementation
-**Days 28-36 | [Web Trio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%204/) | [Linkedin post](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%204)**
+**Days 28-36 | [Web Trio](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%204/) | [Linkedin post]([https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%204](https://www.linkedin.com/posts/manoj-mukkamula_webdevelopment-frontenddevelopment-html-ugcPost-7443736812839329792-NSQm))**
 
 The biggest task before the final one. I built three complete apps and connected them through a personal portfolio website.
 
@@ -87,7 +87,7 @@ The biggest task before the final one. I built three complete apps and connected
 ---
 
 ### Task 5 - Final Project and Optimization
-**Days 37-45 | [ShopEase](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%205/) | [Source Code](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%205)**
+**Days 37-45 | [ShopEase](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%205/) | [Linkedin post](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%205)**
 
 Built **ShopEase**, a fully functional e-commerce frontend as my capstone project. This is built with plain HTML, CSS, and Vanilla JavaScript - no frameworks, no backend.
 
