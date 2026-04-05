@@ -32,11 +32,11 @@
     <div class="hero-content">
       <p class="hero-tag">New Season Arrivals</p>
       <h1>Discover Products <br /><span>You'll Love</span></h1>
-      <p class="hero-sub">Curated collections across every category: style, tech, and more.</p>
+      <p class="hero-sub">Curated collections across every category — style, tech, and more.</p>
       <a href="#products" class="btn-primary">Shop Now ↓</a>
     </div>
     <div class="hero-badge">
-      <span>24+</span>
+      <span>500+</span>
       <p>Products</p>
     </div>
   </section>
@@ -45,7 +45,7 @@
   <section class="controls" id="products">
     <div class="controls-inner">
 
-      <!-- Search -->
+      <!-- Row 1: Search (full width) -->
       <div class="search-wrap">
         <input
           type="text"
@@ -56,21 +56,33 @@
         <span class="search-icon">⌕</span>
       </div>
 
-      <!-- Category Filter -->
-      <div class="filter-wrap">
-        <label for="category-filter">Category</label>
-        <select id="category-filter" aria-label="Filter by category">
-          <option value="all">All Categories</option>
-          <option value="electronics">Electronics</option>
-          <option value="clothing">Clothing</option>
-          <option value="footwear">Footwear</option>
-          <option value="accessories">Accessories</option>
-          <option value="home">Home & Living</option>
-        </select>
+      <!-- Row 2: Category + Sort (side by side) -->
+      <div class="filter-row">
+        <div class="filter-wrap">
+          <label for="category-filter">Category</label>
+          <select id="category-filter" aria-label="Filter by category">
+            <option value="all">All Categories</option>
+            <option value="electronics">Electronics</option>
+            <option value="clothing">Clothing</option>
+            <option value="footwear">Footwear</option>
+            <option value="accessories">Accessories</option>
+            <option value="home">Home & Living</option>
+          </select>
+        </div>
+        <div class="filter-wrap">
+          <label for="sort-select">Sort By</label>
+          <select id="sort-select" aria-label="Sort products">
+            <option value="default">Default</option>
+            <option value="price-asc">Price: Low → High</option>
+            <option value="price-desc">Price: High → Low</option>
+            <option value="rating-desc">Top Rated</option>
+            <option value="name-asc">Name: A → Z</option>
+          </select>
+        </div>
       </div>
 
-      <!-- Price Filter -->
-      <div class="filter-wrap">
+      <!-- Row 3: Price slider (full width) -->
+      <div class="filter-wrap filter-wrap--price">
         <label for="price-filter">Max Price: ₹<span id="price-display">5000</span></label>
         <input
           type="range"
@@ -83,19 +95,7 @@
         />
       </div>
 
-      <!-- Sort -->
-      <div class="filter-wrap">
-        <label for="sort-select">Sort By</label>
-        <select id="sort-select" aria-label="Sort products">
-          <option value="default">Default</option>
-          <option value="price-asc">Price: Low → High</option>
-          <option value="price-desc">Price: High → Low</option>
-          <option value="rating-desc">Top Rated</option>
-          <option value="name-asc">Name: A → Z</option>
-        </select>
-      </div>
-
-      <!-- Result count + Clear -->
+      <!-- Row 4: Count + Clear -->
       <div class="controls-meta">
         <span id="result-count">Showing 0 products</span>
         <button id="clear-filters" class="btn-clear">Clear Filters</button>
