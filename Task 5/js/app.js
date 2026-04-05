@@ -257,6 +257,25 @@ document.getElementById('price-filter').addEventListener('input', function () {
 document.getElementById('sort-select').addEventListener('change', applyFilters);
 document.getElementById('clear-filters').addEventListener('click', clearFilters);
 
+// --- Filter Toggle (mobile) ---
+const filterToggleBtn = document.getElementById('filter-toggle-btn');
+const filterPanel     = document.getElementById('filter-panel');
+
+filterToggleBtn.addEventListener('click', () => {
+  const isOpen = filterPanel.classList.toggle('open');
+  filterToggleBtn.classList.toggle('active', isOpen);
+  filterToggleBtn.setAttribute('aria-expanded', isOpen);
+});
+
+// Close filter panel when a filter changes on mobile
+function closeFilterPanel() {
+  if (window.innerWidth <= 768) {
+    filterPanel.classList.remove('open');
+    filterToggleBtn.classList.remove('active');
+    filterToggleBtn.setAttribute('aria-expanded', false);
+  }
+}
+
 // --- Init ---
 updateCartBadge();
 applyFilters();
