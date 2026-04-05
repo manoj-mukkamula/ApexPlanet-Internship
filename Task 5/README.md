@@ -126,7 +126,7 @@ Web Development Intern · ApexPlanet Software Pvt. Ltd.
 
 - 🔗 [LinkedIn](https://www.linkedin.com/in/manoj-mukkamula/)
 - 🐙 [GitHub](https://github.com/manoj-mukkamula)
-- 📧 mukkamulamanoj@gmail.com
+- 📧 manojmukkamula2@gmail.com
 
 ---
 
