@@ -360,17 +360,15 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 
-/* Groups category + sort side by side on desktop too */
+/* filter-row: on desktop, acts as transparent flex passthrough */
 .filter-row {
-  display: flex;
-  align-items: flex-end;
-  gap: 16px;
+  display: contents; /* children participate directly in controls-inner flex */
 }
 .filter-row .filter-wrap {
   min-width: 140px;
 }
 
-/* Price filter full width on its own */
+/* Price filter on desktop */
 .filter-wrap--price {
   min-width: 160px;
 }
@@ -1006,7 +1004,7 @@ ul { list-style: none; }
     font-size: 0.85rem;
   }
 
-  /* CONTROLS — clean grid layout on mobile */
+  /* CONTROLS — vertical stack on mobile */
   .controls-inner {
     display: flex;
     flex-direction: column;
@@ -1014,43 +1012,31 @@ ul { list-style: none; }
     padding: 12px 16px;
     align-items: stretch;
   }
-  /* Search stays full width — already block */
   .search-wrap { min-width: unset; }
 
-  /* Category + Sort: side by side */
+  /* Restore filter-row as visible 2-col grid on mobile */
   .filter-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
   }
-  .filter-row .filter-wrap {
-    min-width: unset;
-  }
+  .filter-row .filter-wrap { min-width: unset; }
 
-  /* Price slider: full width */
-  .filter-wrap--price {
-    min-width: unset;
-    width: 100%;
-  }
+  /* Price slider full width */
+  .filter-wrap--price { min-width: unset; width: 100%; }
 
-  /* All filter-wraps: column layout */
+  /* All filter-wraps: column */
   .filter-wrap {
     min-width: unset;
     flex-direction: column;
     gap: 4px;
   }
-  .filter-wrap label {
-    font-size: 0.68rem;
-    white-space: nowrap;
-  }
+  .filter-wrap label { font-size: 0.68rem; white-space: nowrap; }
   .filter-wrap select { width: 100%; }
   .filter-wrap input[type="range"] { width: 100%; }
 
   /* Meta row */
-  .controls-meta {
-    margin-left: 0;
-    justify-content: space-between;
-  }
+  .controls-meta { margin-left: 0; justify-content: space-between; }
 
   /* PRODUCT GRID */
   .products-section { padding: 20px 16px 60px; }
