@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | ShopEase</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Shop<span>Ease</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cart.html">
+          Cart <span class="cart-badge" id="cart-badge">0</span>
+        </a>
+        <a href="about.html" class="active">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="about-page">
+
+    <!-- Hero -->
+    <section class="about-hero">
+      <p class="hero-tag">ApexPlanet Internship : Task 5</p>
+      <h1>About <span>ShopEase</span></h1>
+      <p class="hero-sub">A capstone project demonstrating full e-commerce frontend development using HTML, CSS, and JavaScript : built as the final task of a 45-day web development internship.</p>
+    </section>
+
+    <!-- What is ShopEase -->
+    <section class="about-section">
+      <h2>What is ShopEase?</h2>
+      <p>ShopEase is a fully functional e-commerce web application built from scratch using only HTML, CSS, and Vanilla JavaScript : no frameworks, no backend. It features a product listing page with live search, category filters, price range slider, sorting options, a product details modal, a shopping cart with quantity management, localStorage persistence, and a fully responsive design across mobile, tablet, and desktop.</p>
+    </section>
+
+    <!-- Features grid -->
+    <section class="about-section">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <span class="feature-icon">🛍️</span>
+          <h3>24 Products</h3>
+          <p>Across 5 categories : Electronics, Clothing, Footwear, Accessories, and Home & Living.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🔍</span>
+          <h3>Smart Filters</h3>
+          <p>Live search with debounce, category filter, price range slider, and 5 sort options.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🪟</span>
+          <h3>Product Modal</h3>
+          <p>Click any product to view full details : image, description, price, rating, and add to cart.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">🛒</span>
+          <h3>Shopping Cart</h3>
+          <p>Add, remove, increase/decrease qty. Order summary with discount and free delivery logic.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">💾</span>
+          <h3>localStorage</h3>
+          <p>Cart persists across page refreshes and navigation : no data loss.</p>
+        </div>
+        <div class="feature-card">
+          <span class="feature-icon">📱</span>
+          <h3>Responsive Design</h3>
+          <p>Fully responsive at 480px, 768px, and 1024px breakpoints. Tested on Chrome, Firefox, and Safari.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="about-section">
+      <h2>Tech Stack</h2>
+      <div class="tech-row">
+        <span class="tech-badge">HTML5</span>
+        <span class="tech-badge">CSS3</span>
+        <span class="tech-badge">Vanilla JavaScript</span>
+        <span class="tech-badge">CSS Grid</span>
+        <span class="tech-badge">Flexbox</span>
+        <span class="tech-badge">CSS Variables</span>
+        <span class="tech-badge">localStorage API</span>
+        <span class="tech-badge">Google Fonts</span>
+      </div>
+    </section>
+
+    <!-- Developer -->
+    <section class="about-section about-dev">
+      <h2>Developer</h2>
+      <div class="dev-card">
+        <div class="dev-info">
+          <h3>Mukkamula Manoj</h3>
+          <p class="dev-role">Web Development Intern · ApexPlanet Software Pvt. Ltd.</p>
+          <p class="dev-bio">Final-year B.Tech CSE student at AAR Mahaveer Engineering College (JNTUH, 2026). Passionate about building real-world web applications using HTML, CSS, JavaScript, and the MERN stack.</p>
+          <div class="dev-links">
+            <a href="https://www.linkedin.com/in/manoj-mukkamula/" target="_blank" class="dev-link linkedin">LinkedIn ↗</a>
+            <a href="https://github.com/manoj-mukkamula" target="_blank" class="dev-link github">GitHub ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="about-section about-contact">
+      <h2>Contact</h2>
+      <p>Open to fresher developer opportunities and collaborations.</p>
+      <div class="contact-row">
+        <a href="mailto:mukkamulamanoj@gmail.com" class="contact-item">
+          <span>📧</span> mukkamulamanoj@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/manoj-mukkamula/" target="_blank" class="contact-item">
+          <span>💼</span> linkedin.com/in/manoj-mukkamula
+        </a>
+        <a href="https://github.com/manoj-mukkamula" target="_blank" class="contact-item">
+          <span>🐙</span> github.com/manoj-mukkamula
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Shop<span>Ease</span></p>
+      <p class="footer-copy">© 2026 ShopEase. Built by <a href="https://github.com/manoj-mukkamula" target="_blank">Mukkamula Manoj</a> · ApexPlanet Internship Task 5</p>
+    </div>
+  </footer>
+
+  <script>
+    // Update cart badge
+    const cart = JSON.parse(localStorage.getItem('shopease_cart') || '[]');
+    const count = cart.reduce((s, i) => s + i.qty, 0);
+    document.getElementById('cart-badge').textContent = count;
+  </script>
+</body>
+</html>

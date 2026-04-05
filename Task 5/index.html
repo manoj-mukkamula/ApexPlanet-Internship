@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ShopEase - Premium online store with the best products at unbeatable prices." />
+  <title>ShopEase | Premium Online Store</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">Shop<span>Ease</span></a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="cart.html">
+          Cart
+          <span class="cart-badge" id="cart-badge">0</span>
+        </a>
+        <a href="about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">New Season Arrivals</p>
+      <h1>Discover Products <br /><span>You'll Love</span></h1>
+      <p class="hero-sub">Curated collections across every category: style, tech, and more.</p>
+      <a href="#products" class="btn-primary">Shop Now ↓</a>
+    </div>
+    <div class="hero-badge">
+      <span>500+</span>
+      <p>Products</p>
+    </div>
+  </section>
+
+  <!-- CONTROLS -->
+  <section class="controls" id="products">
+    <div class="controls-inner">
+
+      <!-- Search -->
+      <div class="search-wrap">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search products..."
+          aria-label="Search products"
+        />
+        <span class="search-icon">⌕</span>
+      </div>
+
+      <!-- Category Filter -->
+      <div class="filter-wrap">
+        <label for="category-filter">Category</label>
+        <select id="category-filter" aria-label="Filter by category">
+          <option value="all">All Categories</option>
+          <option value="electronics">Electronics</option>
+          <option value="clothing">Clothing</option>
+          <option value="footwear">Footwear</option>
+          <option value="accessories">Accessories</option>
+          <option value="home">Home & Living</option>
+        </select>
+      </div>
+
+      <!-- Price Filter -->
+      <div class="filter-wrap">
+        <label for="price-filter">Max Price: ₹<span id="price-display">5000</span></label>
+        <input
+          type="range"
+          id="price-filter"
+          min="100"
+          max="5000"
+          step="100"
+          value="5000"
+          aria-label="Filter by price"
+        />
+      </div>
+
+      <!-- Sort -->
+      <div class="filter-wrap">
+        <label for="sort-select">Sort By</label>
+        <select id="sort-select" aria-label="Sort products">
+          <option value="default">Default</option>
+          <option value="price-asc">Price: Low → High</option>
+          <option value="price-desc">Price: High → Low</option>
+          <option value="rating-desc">Top Rated</option>
+          <option value="name-asc">Name: A → Z</option>
+        </select>
+      </div>
+
+      <!-- Result count + Clear -->
+      <div class="controls-meta">
+        <span id="result-count">Showing 0 products</span>
+        <button id="clear-filters" class="btn-clear">Clear Filters</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <div class="index-main">
+    <div class="products-section">
+      <div class="product-grid" id="product-grid">
+        <!-- Products injected by app.js -->
+      </div>
+      <div class="no-results hidden" id="no-results">
+        <p>😕 No products found. Try different filters.</p>
+        <button onclick="clearFilters()" class="btn-primary">Reset Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast"></div>
+
+  <!-- PRODUCT MODAL -->
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal-box">
+      <div class="modal-img-wrap">
+        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">✕</button>
+        <img src="" alt="" loading="lazy" onerror="this.onerror=null;this.src='https://placehold.co/400x300/1e1e1e/888?text=No+Image'" />
+      </div>
+      <div class="modal-content">
+        <span class="modal-category"></span>
+        <h2 class="modal-name"></h2>
+        <div class="modal-rating">
+          <span class="stars"></span>
+          <span class="rating-count"></span>
+        </div>
+        <div class="modal-price-row">
+          <span class="modal-price"></span>
+          <span class="modal-original-price"></span>
+          <span class="modal-discount-badge"></span>
+        </div>
+        <p class="modal-description"></p>
+        <button class="modal-btn-cart">+ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">Shop<span>Ease</span></p>
+      <p class="footer-copy">© 2026 ShopEase. Built by <a href="https://github.com/manoj-mukkamula" target="_blank">Mukkamula Manoj</a> · ApexPlanet Internship Task 5</p>
+    </div>
+  </footer>
+
+  <!-- PRODUCT DETAILS MODAL -->
+  <div class="modal-overlay" id="product-modal" role="dialog" aria-modal="true" aria-label="Product details">
+    <div class="modal-box">
+      <div class="modal-img-wrap">
+        <img id="modal-img" src="" alt="" loading="lazy"
+          onerror="this.onerror=null;this.src='https://placehold.co/600x450/1e1e1e/888?text=Image+Unavailable'" />
+        <button class="modal-close" id="modal-close-btn" aria-label="Close product details">✕</button>
+      </div>
+      <div class="modal-content">
+        <span class="modal-category" id="modal-category"></span>
+        <h2 class="modal-name" id="modal-name"></h2>
+        <div class="modal-rating">
+          <span class="stars" id="modal-stars"></span>
+          <span class="rating-count" id="modal-reviews"></span>
+        </div>
+        <div class="modal-price-row">
+          <span class="modal-price" id="modal-price"></span>
+          <span class="modal-original-price" id="modal-orig-price"></span>
+          <span class="modal-discount-badge" id="modal-discount"></span>
+        </div>
+        <p class="modal-description" id="modal-description"></p>
+        <button class="modal-btn-cart" id="modal-cart-btn">+ Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
