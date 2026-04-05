@@ -267,6 +267,19 @@ ul { list-style: none; }
   gap: 16px;
 }
 
+/* Top row: search + toggle btn (toggle hidden on desktop) */
+.controls-top-row {
+  display: contents; /* children join controls-inner flex directly on desktop */
+}
+
+/* Filter toggle button — hidden on desktop */
+.filter-toggle-btn { display: none; }
+
+/* Filter panel — always visible on desktop */
+.filter-panel {
+  display: contents; /* children join controls-inner flex directly on desktop */
+}
+
 /* Search */
 .search-wrap {
   position: relative;
@@ -360,17 +373,53 @@ ul { list-style: none; }
   white-space: nowrap;
 }
 
-/* filter-row: on desktop, acts as transparent flex passthrough */
+/* filter-row: display:contents on desktop so children join flex row directly */
 .filter-row {
-  display: contents; /* children participate directly in controls-inner flex */
+  display: contents;
 }
 .filter-row .filter-wrap {
   min-width: 140px;
 }
-
-/* Price filter on desktop */
 .filter-wrap--price {
   min-width: 160px;
+}
+
+/* ===========================
+   FILTER TOGGLE BUTTON
+   =========================== */
+.filter-toggle-btn {
+  display: none; /* shown only on mobile via media query */
+  align-items: center;
+  gap: 6px;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: var(--font-head);
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.filter-toggle-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.filter-toggle-btn.active {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(232,197,71,0.08);
+}
+.filter-toggle-arrow {
+  display: inline-block;
+  transition: transform 0.2s ease;
+  font-size: 0.7rem;
+}
+.filter-toggle-btn.active .filter-toggle-arrow {
+  transform: rotate(180deg);
 }
 
 /* ===========================
@@ -1004,17 +1053,38 @@ ul { list-style: none; }
     font-size: 0.85rem;
   }
 
-  /* CONTROLS — vertical stack on mobile */
+  /* CONTROLS — collapsible on mobile */
   .controls-inner {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding: 12px 16px;
+    gap: 0;
+    padding: 10px 16px;
     align-items: stretch;
   }
-  .search-wrap { min-width: unset; }
 
-  /* Restore filter-row as visible 2-col grid on mobile */
+  /* Top row: search + filter button side by side */
+  .controls-top-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .search-wrap { min-width: unset; flex: 1; }
+
+  /* Show filter toggle button on mobile */
+  .filter-toggle-btn { display: flex; }
+
+  /* Filter panel: hidden by default on mobile, shown when .open */
+  .filter-panel {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 12px;
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+  }
+  .filter-panel.open { display: flex; }
+
+  /* Category + Sort: 2 columns */
   .filter-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1022,15 +1092,11 @@ ul { list-style: none; }
   }
   .filter-row .filter-wrap { min-width: unset; }
 
-  /* Price slider full width */
+  /* Price slider: full width */
   .filter-wrap--price { min-width: unset; width: 100%; }
 
-  /* All filter-wraps: column */
-  .filter-wrap {
-    min-width: unset;
-    flex-direction: column;
-    gap: 4px;
-  }
+  /* Filter wraps: column */
+  .filter-wrap { min-width: unset; flex-direction: column; gap: 4px; }
   .filter-wrap label { font-size: 0.68rem; white-space: nowrap; }
   .filter-wrap select { width: 100%; }
   .filter-wrap input[type="range"] { width: 100%; }
@@ -1095,10 +1161,11 @@ ul { list-style: none; }
   .hero-sub { font-size: 0.82rem; }
 
   /* CONTROLS */
-  .controls-inner { padding: 10px 12px; gap: 8px; }
+  .controls-inner { padding: 8px 12px; }
   .filter-row { gap: 8px; }
   .filter-wrap label { font-size: 0.65rem; }
   .filter-wrap select { padding: 8px 10px; font-size: 0.8rem; }
+  .filter-toggle-btn { padding: 8px 12px; font-size: 0.8rem; }
 
   /* PRODUCT GRID — 2 col stays but tighter */
   .products-section { padding: 16px 12px 48px; }
