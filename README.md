@@ -87,7 +87,7 @@ The biggest task before the final one. I built three complete apps and connected
 ---
 
 ### Task 5 - Final Project and Optimization
-**Days 37-45 | [ShopEase](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%205/) | [Linkedin post](https://github.com/manoj-mukkamula/ApexPlanet-Internship/tree/main/Task%205)**
+**Days 37-45 | [ShopEase](https://manoj-mukkamula.github.io/ApexPlanet-Internship/Task%205/) | [Linkedin post](https://www.linkedin.com/posts/manoj-mukkamula_webdevelopment-frontenddevelopment-html-ugcPost-7446993783927451648-4pnI)**
 
 Built **ShopEase**, a fully functional e-commerce frontend as my capstone project. This is built with plain HTML, CSS, and Vanilla JavaScript - no frameworks, no backend.
 
